@@ -1,0 +1,139 @@
+<?php
+/*
+if (!is_dir('fasta_files')) {
+    mkdir('fasta_files',0777);
+}else if (is_dir('fasta_files')) {
+	rmdir('fasta_files');
+	mkdir('fasta_files',0777);
+
+}
+
+
+
+}
+
+//rmdir($default_path.'fasta_file');
+
+
+*/?>
+
+<!DOCTYPE >
+<html>
+<head>
+<title>GMM v2.1</title>
+<style type="text/css">
+body {
+	margin:0;
+	padding:40px;
+	background:#00ffff;
+	font:80% Arial, Helvetica, sans-serif;
+	color:#303030;
+	line-height:180%;
+}
+
+h1{
+	font-size:180%;
+	font-weight:normal;
+	color:#555;
+}
+a{
+	text-decoration:none;
+	color:#f30;	
+}
+p{
+	clear:both;
+	margin:0;
+	padding:.5em 0;
+}
+pre{
+	display:block;
+	font:100% "Courier New", Courier, monospace;
+	padding:10px;
+	border:1px solid #bae2f0;
+	background:#e3f4f9;	
+	margin:.5em 0;
+	overflow:auto;
+	width:800px;
+}
+
+
+/*  */
+
+#tooltip{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:2px 5px;
+	color:#333;
+	display:none;
+	}	
+
+/*  */
+#page-background {
+position:fixed; top:0; left:0; width:110%; height:110%;
+
+}
+/* Specify the position and layering for the content that needs to appear in front of the background image. Must have a higher z-index value than the background image. Also add some padding to compensate for removing the margin from the 'html' and 'body' tags. */
+#content {position:relative; z-index:1; padding:10px;}
+</style>
+
+</head>
+<body>
+	<div id="page-background"><img src="dna1.jpg" width="100%" height="100%" alt=""></div>
+	<div id="content">
+	
+	
+	
+<p>
+
+<font size="7"  face="Georgia, Arial, Garamond">GENOME MUTATION MAPPER   </font>
+<font size="5"  face="Georgia, Arial, Garamond"> V2.1  </font>
+
+</p>
+
+<p><font size="5" face="Georgia, Arial" color="maroon">T</font>HIS SOFTWARE PROVIDE THE COMPARISION MAP BETWEEN MULTIPLE GENOMES(SPECIALLY HUMAN ADENO VIRUSES)</p>
+
+<p><font size="5" face="Georgia, Arial" color="maroon">S</font>TEP 1: IF YOUR GENEOMES REGISTERED AT NCBI ENTER  ACCESSION NUMBERS </p>
+<p><font size="5" face="Georgia, Arial" color="maroon">S</font>TEP 2: IF YOUR GENOMES IS NOT REGISTERED AT NCBI JUST COPY WHOLE SEQUENCE(FASTA FORMAT) AT SPECIFIED REGION </p>
+
+<p><font size="5" face="Georgia, Arial" color="maroon">S</font>TEP 3: PUSH SUBMIT BUTTON  </p>
+
+
+
+  
+ <form  enctype="multipart/form-data" action= "AC.php"   method="post">
+<div align="center">
+ YOUR ACCESSION NUMBERS :
+   <br />
+  <textarea  name="AC-NUM" rows="5" cols="20"  > </textarea>
+  </div>
+  <div align="center">
+  YOUR SEQUENCES :
+   <br />
+  <textarea  name="fasta" rows="5" cols="50" > </textarea>
+   </div>
+   <div align="center">
+  <input  type="submit"  value="SUBMIT" />
+  
+ </div>
+</form>
+
+
+<font size="2"  face="Georgia, Arial, Garamond">  By: Amirhossein Shamsaddini  </font>
+<br />
+<font size="2"  face="Georgia, Arial, Garamond">   Email: amir.shams84@gmail.com  </font>
+<br />
+<font size="2"  face="Georgia, Arial, Garamond">   Tel: 703-953-0392 </font>
+<br />
+<font size="2"  face="Georgia, Arial, Garamond"> Advisor: Professor Donald Seto </font>
+<br />
+<a href="http://newsdesk.gmu.edu/2012/08/professor-uncovers-secrets-of-uncommon-cold-virus/"style="color: #4a2885" style="text-decoration : underline"target="_blank"> <font size="3"  face="Georgia, Arial, Garamond">About Us.</font></a>
+<br />
+<font size="1"  face="Georgia, Arial, Garamond"> Background-Image :Bill_Frymire 2007 </font>
+<br />
+<font size="2"  face="Georgia, Arial, Garamond"> <div align="center">GEORGE MASON UNIVERSITY - 2016 </font>
+
+</body>
+</html>
+
+
