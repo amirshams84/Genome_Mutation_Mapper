@@ -138,6 +138,7 @@ foreach($files as $file){ // iterate files
 		$ac_list = array_filter(array_map('trim', $ac_list));
 		$ac_list_size = sizeof($ac_list);
 		$_SESSION['ac_list'] = $ac_list;
+		//print_r($ac_list);
 	//print($ac_list_size);
 	//print "<br>";
 	//#### calling the function to save fasta file of ac numbers
@@ -192,6 +193,22 @@ foreach($files as $file){ // iterate files
 
 	#####################################################genbank file creation
 	function genbank($ac,$i,$rand){
+		
+
+		$LINK = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ac&rettype=fasta";
+		if (!$fp = curl_init($LINK)){
+			print("you have entered a wrong ac number");
+			print "<br>";
+		}else{
+			
+			$fasta_string = file_get_contents($LINK);
+			$newfile='./fasta_files/fasta_'.$rand.'_'.$i.'.fasta';
+			file_put_contents($newfile, $fasta_string);
+			chmod($newfile, 0777);
+			
+		}
+
+		/*
 
 		$gblink ="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ac&rettype=gbwithparts&retmode=text";
 		if(url_exists($gblink)==1){
@@ -207,6 +224,7 @@ foreach($files as $file){ // iterate files
 			print "<br>";
 
 		}
+		*/
 	}
 	//####################################  fasta file 
 	function fasta($fa,$fc,$ac_list_size,$rand){
